@@ -8,3 +8,12 @@ function printManyTimes(str) {
   }
 }
 printManyTimes("freeCodeCamp");
+
+// objects (including arrays and functions) assigned to a variable using const are still mutable.
+
+const s = [5, 7, 2];
+function editInPlace() {
+  let i = s.pop();
+  s.unshift(i);
+}
+console.log(s);
