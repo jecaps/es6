@@ -14,3 +14,12 @@ const HIGH_TEMPERATURES = {
 };
 const { today, tomorrow } = HIGH_TEMPERATURES;
 console.log(today, tomorrow);
+
+/* Destructuring allows you to assign a new variable name when extracting values. 
+  You can do this by putting the new name after a colon when assigning the value. */
+
+const { name: userName, age: userAge } = user;
+console.log(userName, userAge);
+
+const { today: highToday, tomorrow: highTomorrow } = HIGH_TEMPERATURES;
+console.log(highToday, highTomorrow);
