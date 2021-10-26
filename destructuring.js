@@ -67,3 +67,15 @@ let f = 8,
   g = 6;
 [g, f] = [f, g];
 console.log(f, g);
+
+/* In some situations involving array destructuring, we might want to collect the rest of the elements into a separate array.
+  The result is similar to Array.prototype.slice()*/
+
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function removeFirstTwo(list) {
+  const [a, b, ...arr] = list;
+  console.log(a, b);
+  return arr;
+}
+const arr = removeFirstTwo(source);
+console.log(arr);
