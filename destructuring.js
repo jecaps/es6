@@ -79,3 +79,17 @@ function removeFirstTwo(list) {
 }
 const arr = removeFirstTwo(source);
 console.log(arr);
+
+/* In some cases, you can destructure the object in a function argument itself.
+  When stats is passed to the function, the values are destructured from the function parameter for use within the function.*/
+
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85,
+};
+const half = ({ max, min }) => (max + min) / 2.0;
+console.log(half(stats));
