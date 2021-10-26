@@ -54,3 +54,16 @@ const {
   today: { low: theLowToday, high: theHighToday },
 } = THE_LOCAL_FORECAST;
 console.log(theLowToday, theHighToday);
+
+// Destructuring an array lets us pick or choose which elements you want to assign to variables.
+
+const [a, b] = [1, 2, 3, 4, 5, 6];
+console.log(a, b);
+
+const [c, d, , , e] = [1, 2, 3, 4, 5, 6];
+console.log(c, d, e);
+
+let f = 8,
+  g = 6;
+[g, f] = [f, g];
+console.log(f, g);
