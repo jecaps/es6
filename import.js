@@ -19,3 +19,12 @@ import * as myMathModule from "./math_functions.js";
 import * as stringFunctions from "./string_functions.js";
 stringFunctions.uppercaseString("hello");
 stringFunctions.lowercaseString("WORLD!");
+
+// To import a default export, you need to use a different import syntax.
+
+import add from "./math_functions.js";
+
+// Challenge
+
+import subtract from "./math_functions.js";
+subtract(7, 4);
