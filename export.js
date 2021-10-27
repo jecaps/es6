@@ -26,3 +26,27 @@ const lowercaseString = (string) => {
   return string.toLowerCase();
 };
 export { uppercaseString, lowercaseString };
+
+/* Use export default  if only one value is being exported from a file.
+  It is also used to create a fallback value for a file or  module.
+  Since this is used to declare a fallback value for a module or file, 
+  you can only have one value be a default export in each module of file.
+  Additionally, oýou cannot use export default with var, let, or const.*/
+
+  export default function add(x, y) { // a named function
+    return x + y;
+  }
+  
+  export default function(x, y) { // an anonymous function
+    return x + y;
+  }
+
+  // Challenge
+
+  export default function subtract(x, y) {
+    return x - y;
+  }
+  
+  
+  
+  
