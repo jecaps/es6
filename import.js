@@ -7,6 +7,15 @@ import { add, subtract } from "./math_functions.js";
 // Challenge
 
 import { uppercaseString, lowercaseString } from "./string_functions.js";
-
 uppercaseString("hello");
 lowercaseString("WORLD!");
+
+// 'import * as..' to import all of its contents into the current file
+
+import * as myMathModule from "./math_functions.js";
+
+// Challenge
+
+import * as stringFunctions from "./string_functions.js";
+stringFunctions.uppercaseString("hello");
+stringFunctions.lowercaseString("WORLD!");
