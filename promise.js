@@ -24,7 +24,6 @@ const myPromise = new Promise((resolve, reject) => {
 // Challenge
 
 const makeServerRequest = new Promise((resolve, reject) => {
-  // responseFromServer represents a response from a server
   let responseFromServer;
 
   if (responseFromServer) {
@@ -32,10 +31,17 @@ const makeServerRequest = new Promise((resolve, reject) => {
   } else {
     reject("Data not received");
   }
-  makeServerRequest.then((result) => {});
+});
+makeServerRequest.then((result) => {
   console.log(result);
+});
+makeServerRequest.catch((error) => {
+  console.log(error);
 });
 
 /* When you make a server request it takes some amount of time, and after it completes you usually want to do something with the response from the server. 
   This can be achieved by using the then method. 
   The then method is executed immediately after your promise is fulfilled with resolve. */
+
+/* catch is the method used when your promise has been rejected. 
+  It is executed immediately after a promise's reject method is called */
