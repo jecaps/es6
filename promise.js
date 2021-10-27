@@ -2,7 +2,7 @@
   When the task completes, you either fulfill your promise or fail to do so. Promise is a constructor function, so you need to use the new keyword to create one. 
   It takes a function, as its argument, with two parameters - resolve and reject.*/
 
-const myPromise = new Promise((resolve, reject) => {});
+// const myPromise = new Promise((resolve, reject) => {});
 
 // Challenge
 
@@ -32,4 +32,10 @@ const makeServerRequest = new Promise((resolve, reject) => {
   } else {
     reject("Data not received");
   }
+  makeServerRequest.then((result) => {});
+  console.log(result);
 });
+
+/* When you make a server request it takes some amount of time, and after it completes you usually want to do something with the response from the server. 
+  This can be achieved by using the then method. 
+  The then method is executed immediately after your promise is fulfilled with resolve. */
